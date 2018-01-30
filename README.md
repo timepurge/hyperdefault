@@ -12,6 +12,9 @@ Hyperdefault is a good companion when working with configuration driven UI or wh
 npm install hyperdefault --save
 ```
 
+# Jump straight into action
+https://runkit.com/timepurge/5a70c08a8cbe6f0012dbc402
+
 # Use case
 Consider this hypothetical configuration json for a data-grid:
 ```sh
@@ -86,4 +89,5 @@ let grid_config = {
 hyperdefault.expand(grid_config, rule); // see `rule` defined above.
 ```
 
-This will expand the lean `grid_config` to `grid_config_xl` state. Take a look at `test/unit.js` for more examples.
+This will expand the lean `grid_config` to `grid_config_xl` state. 
+Take a look at `test/unit.js` for more examples.
