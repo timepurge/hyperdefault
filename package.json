@@ -8,7 +8,7 @@
     "test": "tape --require babel-register test/unit.js"
   },
   "keywords": [
-    "extend"
+    "extend", "normalize", "json" , "configuration", "api"
   ],
   "author": "timepurge <definednull@gmail.com>",
   "license": "MIT",
