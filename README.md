@@ -1,5 +1,4 @@
-
-# Hyperdefault
+# Hyperdefault [![Build Status](https://travis-ci.org/timepurge/hyperdefault.svg?branch=master)](https://travis-ci.org/timepurge/hyperdefault)
 
 It's often nice to have guaranteed object properties when working with Javascript. This guarantee avoids the need for a lot of `hasOwnProperty` checks.
 
