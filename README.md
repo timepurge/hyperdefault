@@ -49,6 +49,10 @@ Following is a valid `Hyperdefault` rule for "grid_config_xl" above:
 
 ```sh
 let rule = { 
+    obj: { 
+        grid_title: "", 
+        columns: "${columnbean:array}" 
+    },
     ref:{
         cellformatbean: { 
             "type": "string", "tooltip": true 
@@ -58,10 +62,6 @@ let rule = {
             "key": "", 
             "cell-format": "${cellformatbean:object}" 
         }
-    },
-    obj: { 
-        grid_title: "", 
-        columns: "${columnbean:array}" 
     }
 } 
 ```
