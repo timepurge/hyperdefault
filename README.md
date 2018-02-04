@@ -1,6 +1,6 @@
 # Hyperdefault [![Build Status](https://travis-ci.org/timepurge/hyperdefault.svg?branch=master)](https://travis-ci.org/timepurge/hyperdefault)
 
-It's often nice to have guaranteed object properties when working with Javascript. This guarantee avoids the need for a lot of `hasOwnProperty` checks.
+It's often nice to have guaranteed object properties when working with Javascript. This guarantee avoids the need for a lot of `in` and `hasOwnProperty` checks.
 
 Hyperdefault normalizes your lean Json payload/ JS Objects with defaults from a schema rule. The schema rule itself is a json, thus allowing you to maintain your schema rule externally.
 
@@ -43,7 +43,10 @@ let grid_config_xl = {
 ```
 
 As obvious, properties like "cell-format" are repetitive in nature. Hyperdefault allows you to define a rule json, so that your payload need to have only the overriding properties.
-Following is a valid `Hyperdefault` rule for the above json:
+
+# Usage
+Following is a valid `Hyperdefault` rule for "grid_config_xl" above:
+
 ```sh
 let rule = { 
     ref:{
@@ -62,11 +65,14 @@ let rule = {
     }
 } 
 ```
-Hyperdefault starts parsing rules from "obj" key in rule json. Once it encounters a value of format `${<ref.beankey>:<type>}`, it will look for beankey in "ref" . You can further deep link objects and arrays. Hyperdefault supports two `type` values:
+
+A `rule` is just an object with `obj` key defined. You can define your complex object structure with beans defined in `ref` key. 
+Hyperdefault starts parsing rules from `obj` key in rule json. Once it encounters a value of format `${<ref.beankey>:<type>}`, it will look for beankey in `ref` . You can further deep link objects and arrays. Hyperdefault supports two `type` values:
   - array
   - object
 
-# Usage
+Using `hyperdefault` you can ignore the defaults and have a lean json payload as in the implementation below:
+
 ```sh
 const hyperdefault = require("hyperdefault");
 let grid_config = { 
