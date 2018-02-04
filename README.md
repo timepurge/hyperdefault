@@ -66,8 +66,8 @@ let rule = {
 } 
 ```
 
-A `rule` is just an object with `obj` key defined. You can define your complex object structure with beans defined in `ref` key. 
-Hyperdefault starts parsing rules from `obj` key in rule json. Once it encounters a value of format `${<ref.beankey>:<type>}`, it will look for beankey in `ref` . You can further deep link objects and arrays. Hyperdefault supports two `type` values:
+A `rule` is just an object with `obj` property defined. You can define your complex object structure with beans defined in `ref` prop of rule. 
+Hyperdefault starts parsing rules from `obj` prop in rule json. Once it encounters a value of format `${<beankey>:<type>}`, it will look for beankey in `ref` . You can further deep crosslink objects and arrays from within this bean. Hyperdefault supports two `type` values:
   - array
   - object
 
