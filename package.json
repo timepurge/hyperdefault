@@ -4,8 +4,9 @@
   "description": "code against guaranteed deep defaults",
   "main": "dist/hyperdefault.js",
   "scripts": {
-    "babelbuild":"babel src/index.js --out-file dist/hyperdefault.js",
-    "build": "rimraf dist && mkdirp dist && npm run babelbuild  && npm run test",
+    "uglybuild": "uglifyjs src/index.js -o dist/hyperdefault.js --require babel-register",
+    "babelbuild": "babel dist/hyperdefault.js --out-file dist/hyperdefault.es5.js",
+    "build": "rimraf dist && mkdirp dist && npm run uglybuild && npm run babelbuild  && npm run test",
     "test": "tape --require babel-register test/unit.js",
     "coverage": "istanbul cover test/unit.js"
   },
@@ -26,7 +27,8 @@
     "istanbul": "^0.4.5",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.6.2",
-    "tape": "^4.8.0"
+    "tape": "^4.8.0",
+    "uglify-es": "^3.3.9"
   },
   "repository": {
     "type": "git",
