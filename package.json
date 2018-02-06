@@ -8,7 +8,8 @@
     "babelbuild": "babel dist/hyperdefault.js --out-file dist/hyperdefault.es5.js",
     "build": "rimraf dist && mkdirp dist && npm run uglybuild && npm run babelbuild  && npm run test",
     "test": "tape --require babel-register test/unit.js",
-    "coverage": "istanbul cover test/unit.js"
+    "coverage": "istanbul cover test/unit.js",
+    "coveralltask":"npm run coverage && cat coverage/lcov.info | coveralls"
   },
   "keywords": [
     "extend",

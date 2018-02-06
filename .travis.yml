@@ -1,4 +1,4 @@
 language: node_js
 node_js:
   - 9.2.0
-after_success: 'npm run coverage && cat coverage/lcov.info | coveralls'
+after_success: 'npm run coveralltask'
