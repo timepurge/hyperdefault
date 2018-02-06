@@ -93,4 +93,4 @@ const expand=(target,rule)=>{
     return target;
 }
 
-export {expand}
+module.exports.expand=expand;

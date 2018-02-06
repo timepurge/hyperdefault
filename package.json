@@ -4,18 +4,28 @@
   "description": "code against guaranteed deep defaults",
   "main": "dist/hyperdefault.js",
   "scripts": {
-    "build": "babel src/index.js --out-file dist/hyperdefault.js",
-    "test": "tape --require babel-register test/unit.js"
+    "babelbuild":"babel src/index.js --out-file dist/hyperdefault.js",
+    "build": "rimraf dist && mkdirp dist && npm run babelbuild  && npm run test",
+    "test": "tape --require babel-register test/unit.js",
+    "coverage": "istanbul cover test/unit.js"
   },
   "keywords": [
-    "extend", "normalize", "json" , "configuration", "api"
+    "extend",
+    "normalize",
+    "json",
+    "configuration",
+    "api"
   ],
   "author": "timepurge <definednull@gmail.com>",
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
+    "istanbul": "^0.4.5",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
     "tape": "^4.8.0"
   },
   "repository": {
