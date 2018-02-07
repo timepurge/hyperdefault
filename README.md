@@ -1,4 +1,4 @@
-# Hyperdefault [![Build Status](https://travis-ci.org/timepurge/hyperdefault.svg?branch=master)](https://travis-ci.org/timepurge/hyperdefault)
+# Hyperdefault [![Build Status](https://travis-ci.org/timepurge/hyperdefault.svg?branch=master)](https://travis-ci.org/timepurge/hyperdefault) [![Coverage Status](https://coveralls.io/repos/github/timepurge/hyperdefault/badge.svg?branch=master)](https://coveralls.io/github/timepurge/hyperdefault?branch=master)
 
 It's often nice to have guaranteed object properties when working with Javascript. This guarantee avoids the need for a lot of `in` and `hasOwnProperty` checks.
 
