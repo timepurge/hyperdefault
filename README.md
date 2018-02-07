@@ -1,10 +1,10 @@
 # Hyperdefault [![Build Status](https://travis-ci.org/timepurge/hyperdefault.svg?branch=master)](https://travis-ci.org/timepurge/hyperdefault) [![Coverage Status](https://coveralls.io/repos/github/timepurge/hyperdefault/badge.svg?branch=master)](https://coveralls.io/github/timepurge/hyperdefault?branch=master)
 
-It's often nice to have guaranteed object properties when working with Javascript. This guarantee avoids the need for a lot of `in` and `hasOwnProperty` checks.
+It's often nice to have guaranteed object properties when working with Javascript. This guarantee avoids the need for a lot of `in` and `hasOwnProperty` checks. Hyperdefault is a good companion when building configuration driven UI Components or in any scenario where you want to code against guarenteed defaults.
 
 Hyperdefault normalizes your lean Json payload/ JS Objects with defaults from a schema rule. The schema rule itself is a json, thus allowing you to maintain your schema rule externally.
 
-Hyperdefault is a good companion when working with configuration driven UI or when you just dont want hardcoded defaults in code.
+
 
 # Installation
 ```sh
