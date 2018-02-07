@@ -4,11 +4,11 @@
   "description": "code against guaranteed deep defaults",
   "main": "dist/hyperdefault.js",
   "scripts": {
-    "uglybuild": "uglifyjs src/index.js -o dist/hyperdefault.js --require babel-register",
+    "uglybuild": "uglifyjs src/index.js -o dist/hyperdefault.js -b --require babel-register",
     "babelbuild": "babel dist/hyperdefault.js --out-file dist/hyperdefault.es5.js",
     "build": "rimraf dist && mkdirp dist && npm run uglybuild && npm run babelbuild  && npm run test",
-    "test": "tape --require babel-register test/unit.js",
-    "coverage": "istanbul cover test/unit.js"
+    "test": "tape --require babel-register test/**/*.js",
+    "coverage": "istanbul cover tape -- test/unit.js test/branched.js"
   },
   "keywords": [
     "extend",
